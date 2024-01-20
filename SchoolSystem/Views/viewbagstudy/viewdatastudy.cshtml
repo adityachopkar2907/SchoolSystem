@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "viewdatastudy";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>viewdatastudy</h2>
+<div>
+    <pre>
+What is view Data?
+:-To pass data from controller to view then we use viewdata
+It works as a Dictionary.
+
+SYNTAX:
+ViewData["myKey"]=value; 
+
+
+</pre>
+</div>
+<hr />
+<div>
+    <table class="table">
+        <tr>
+            <td style="text-align:center">View Data Study</td>
+        </tr>
+        <tr>
+            <td>
+                @ViewData["Name"]
+            </td>
+        </tr>
+    </table>
+</div>
+<hr />
+<div>
+    <table class="table">
+        <tr>
+            <td class="table-secondary">City List
+            </td>
+        </tr>
+        @foreach (var items in (List<string>)ViewData["Citylist"])
+        {
+        <tr>
+            <td>@items</td>
+        </tr>
+        }
+    </table>
+</div>
+<div>
+    <code>
+        <pre>
+ public ActionResult viewdatastudy()
+ {
+     //Simple data
+     ViewData["Name"] = "Today we are learning view data in MVC";
+     //By using list
+     List<string> Citylist= new List<string>() { "Nagpur", "pune", "Mumbai", "Delhi" };
+     ViewData["Citylist"]= Citylist;
+
+     return View();
+ }
+</pre>
+    </code>
+</div>

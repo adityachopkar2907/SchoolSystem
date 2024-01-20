@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "senddatausingbinding";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>senddatausingbinding</h2>
+<div>
+    <table>
+        <tr>
+            <td>
+                FirstName:
+            </td>
+            <td>
+                @ViewBag.Myproperty
+            </td>
+        </tr>
+        <tr>
+            <td>
+                LastName:
+            </td>
+            <td>@ViewData["Myproperty"] </td>
+        </tr>
+       </table>
+</div>
+

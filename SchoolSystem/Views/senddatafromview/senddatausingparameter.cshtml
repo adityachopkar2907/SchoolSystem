@@ -1,0 +1,100 @@
+﻿@model SchoolSystem.Models.simple_name
+@{
+    ViewBag.Title = "senddatausingparameter";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>senddatausingparameter</h2>
+<div>
+    <section>
+        @using (Html.BeginForm("senddatausingparameter", "senddatafromview"))
+        {
+            <table class="table">
+                <tr>
+                    <td colspan="2">Send Data using Parameter</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="FirstName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td> <input type="text" name="LastName" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="sendusingparameter" /></td>
+                </tr>
+            </table>
+        }
+    </section>
+
+</div>
+<div>
+    <h3>@ViewBag.mydtails</h3>
+
+</div>
+<br />
+<h2>senddatausingparameter</h2>
+<div>
+    <section>
+        @using (Html.BeginForm("SenddatausingRequest", "senddatafromview",FormMethod.Post))
+        {
+            <table class="table">
+                <tr>
+                    <td colspan="2">Send Data using Request</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        @Html.TextBoxFor(x=>x.firstname)
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        @Html.TextBoxFor(x => x.lastname)
+
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="sendusingrequest" /></td>
+                </tr>
+            </table>
+        }
+    </section>
+
+</div>
+<div>
+    <h3>@ViewBag.mydtails</h3>
+
+</div>
+<br />
+<div>
+    <section>
+        @using (Html.BeginForm("senddatausingbinding", "senddatafromview"))
+        {
+            <table class="table">
+                <tr>
+                    <td colspan="2">Send Data using binding</td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="FirstName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td> <input type="text" name="LastName" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="sendusingbinding" /></td>
+                </tr>
+            </table>
+        }
+    </section>
+
+</div>
+

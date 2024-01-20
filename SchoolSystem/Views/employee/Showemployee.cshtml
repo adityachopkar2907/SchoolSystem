@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SchoolSystem.Models.employee>
+@{
+    ViewBag.Title = "Showemployee";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Showemployee</h2>
+<hr />
+<div>
+    <table class="table">
+        <tr class="table-primary">
+            <td>id</td>
+            <td>name</td>
+            <td>designation</td>
+            <td>companyname</td>
+            <td>salary</td>
+           
+
+            </tr>
+        @foreach(var emp in Model)
+            {
+                <tr class="table-secondary">
+
+                    <td>@Html.DisplayFor(ModelItems => emp.id)</td>
+                    <td>@Html.DisplayFor(ModelItems => emp.name)</td>
+                    <td>@Html.DisplayFor(ModelItems => emp.designation)</td>
+                    <td>@Html.DisplayFor(ModelItems => emp.companyname)</td>
+                    <td>@Html.DisplayFor(ModelItems => emp.salary )</td>
+                </tr>
+            }
+    </table>
+</div>
+
