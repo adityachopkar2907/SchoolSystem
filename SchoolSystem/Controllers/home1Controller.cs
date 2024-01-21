@@ -6,19 +6,10 @@ using System.Web.Mvc;
 
 namespace SchoolSystem.Controllers
 {
-    public class DemoController : Controller
+    public class home1Controller : Controller
     {
-        // GET: Demo
+        // GET: home1
         public ActionResult Index()
-        {
-            return View();
-        }
-
-        public ActionResult Index1()
-        {
-            return View();
-        }
-        public ActionResult Index2()
         {
             return View();
         }
