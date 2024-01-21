@@ -379,6 +379,7 @@
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\employeeController.cs" />
+    <Compile Include="Controllers\home1Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\scapfoldingController.cs" />
     <Compile Include="Controllers\senddatafromviewController.cs" />
@@ -506,6 +507,7 @@
     <Content Include="Views\senddatafromview\senddatausingparameter.cshtml" />
     <Content Include="Views\senddatafromview\senddatausingbinding.cshtml" />
     <Content Include="Views\Demo\Index.cshtml" />
+    <Content Include="Views\home1\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
